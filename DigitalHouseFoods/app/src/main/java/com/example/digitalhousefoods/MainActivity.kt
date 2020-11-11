@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity(), ListaRestaurantesAdapter.OnItemClickLi
         return lista_restaurantes
     }
     override fun onItemClick(position: Int) {
-        startActivity(Intent(this, DetalheActivity::class.java))
+        if(position == 0) {
+            startActivity(Intent(this, DetalheActivity::class.java))
+        }
     }
 }
